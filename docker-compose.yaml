@@ -22,6 +22,7 @@ services:
       SMTP_EMBED_IMAGES: "true"
       WEBSOCKET_ENABLED: "true"
       RELOAD_TEMPLATES: "false"
+      TEMPLATES_FOLDER: "/data/templates"
     volumes:
       - ./vw-data/:/data/
     ports:
