@@ -1,21 +1,26 @@
 services:
   vaultwarden:
-    image: vaultwarden/server:latest
-    container_name: vaultwarden
+    image: "vaultwarden/server:latest"
+    container_name: "vaultwardenfinallversion"
     restart: unless-stopped
     environment:
-      - WEBSOCKET_ENABLED=true
-      - SIGNUPS_ALLOWED=false
-      - RELOAD_TEMPLATE=true
-      - SMTP_HOST=smtp.poczta.onet.pl
-      - SMTP_PORT=587
-      - SMTP_SECURITY=starttls
-      - SMTP_USERNAME=passmartech-it@onet.pl
-      - SMTP_PASSWORD=DDOC-KFDN-PKFG-F2RB
-      - SMTP_FROM=passmartech-it@onet.pl
-      - SMTP_FROM_NAME=TEST-HASELKA
-      - ADMIN_TOKEN=haslo
+      SIGNUPS_ALLOWED: "true"
+      SIGNUPS_VERIFY: "true"
+      WEBSOCKET_ENABLED: "true"
+      SHOW_PASSWORD_HINT: "false"
+      RELOAD_TEMPLATE: "true"
     volumes:
-      - ./vw-data:/data
+      - ./vw-data/:/data/
     ports:
-      - "8080:80"
+      - "801:80"
+    networks:
+      vaultwarden_network:
+        ipv4_address: 10.10.10.3
+
+networks:
+  vaultwarden_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.10.0/24
+          gateway: 10.10.10.1
