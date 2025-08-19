@@ -4,7 +4,7 @@ services:
     container_name: "vaultwardenfinallversion"
     restart: unless-stopped
     environment:
-     - ADMIN_TOKEN: "$$argon2id$$v=19$$m=65540,t=3,p=4$$ZjJleEhQMld5WFlIbkFMQkY1L0tvMEVZLzlWZjhYT0VLa0dtNXdMZTY0WT0$$CKamsIU5TVwaatyAVco+f7OYF95GegfEulxnd7airiQ"
+      ADMIN_TOKEN: "HASLO"
     volumes:
       - ./vw-data/:/data/
     ports:
