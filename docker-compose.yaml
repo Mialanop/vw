@@ -21,7 +21,7 @@ services:
       SMTP_TIMEOUT: 25
       SMTP_EMBED_IMAGES: "true"
       WEBSOCKET_ENABLED: "true"
-      RELOAD_TEMPLATES: "true"
+      RELOAD_TEMPLATES: "false"
     volumes:
       - ./vw-data/:/data/
     ports:
