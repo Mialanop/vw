@@ -11,7 +11,7 @@ services:
       - SMTP_PORT=587
       - SMTP_SECURITY=starttls
       - SMTP_USERNAME=passmartech-it@onet.pl
-      - SMTP_PASSWORD=DDOC-KFDN-`PKFG-F2RB
+      - SMTP_PASSWORD=DDOC-KFDN-PKFG-F2RB
       - SMTP_FROM=passmartech-it@onet.pl
       - SMTP_FROM_NAME=TEST-HASELKA
       - ADMIN_TOKEN=haslo
