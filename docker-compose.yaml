@@ -4,11 +4,7 @@ services:
     container_name: "vaultwardenfinallversion"
     restart: unless-stopped
     environment:
-      SIGNUPS_ALLOWED: "true"
-      SIGNUPS_VERIFY: "true"
-      WEBSOCKET_ENABLED: "true"
-      SHOW_PASSWORD_HINT: "false"
-      RELOAD_TEMPLATE: "true"
+      - ADMIN_TOKEN: "HASLO"
     volumes:
       - ./vw-data/:/data/
     ports:
