@@ -9,6 +9,7 @@ services:
       ADMIN_TOKEN: "HASLO"  
     volumes:
       - ./vw-data/:/data/
+      - ./vw-data/template/email:/data/templates/email
     ports:
       - "801:80"
     networks:
