@@ -3,6 +3,8 @@ services:
     image: "vaultwarden/server:latest"
     container_name: "vaultwardenfinallversion"
     restart: unless-stopped
+    env_file:
+     - conf_env_for_vaultwarden_finall_version.env
     environment:
       ADMIN_TOKEN: "HASLO"  
     volumes:
