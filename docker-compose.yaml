@@ -4,24 +4,7 @@ services:
     container_name: "vaultwardenfinallversion"
     restart: unless-stopped
     environment:
-      ADMIN_TOKEN: "HASLO"
-      DOMAIN: "https://pass.martech-it.org"
-      SIGNUPS_ALLOWED: "false"
-      SIGNUPS_VERIFY: "true"
-      EMERGENCY_ACCESS_ALLOWED: "true"
-      INVITATION_ORG_NAME: "Bank haseł"
-      SHOW_PASSWORD_HINT: "false"
-      SMTP_HOST: "smtp.poczta.onet.pl"
-      SMTP_FROM: "passmartech-it@onet.pl"
-      SMTP_FROM_NAME: "Bank Haseł"
-      SMTP_PORT: 587
-      SMTP_SECURITY: "starttls"
-      SMTP_USERNAME: "passmartech-it@onet.pl"
-      SMTP_PASSWORD: "DDOC-KFDN-PKFG-F2RB"
-      SMTP_TIMEOUT: 25
-      SMTP_EMBED_IMAGES: "true"
-      WEBSOCKET_ENABLED: "true"
-      RELOAD_TEMPLATES: "true"
+      ADMIN_TOKEN: "HASLO"  
     volumes:
       - ./vw-data/:/data/
     ports:
