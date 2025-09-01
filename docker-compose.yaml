@@ -3,13 +3,11 @@ services:
     image: "vaultwarden/server:latest"
     container_name: "vaultwardenfinallversion"
     restart: unless-stopped
+# aby zadziałały parametry z naszego pliku .env należy dodać zmieną:
     env_file:
-     - conf_env_for_vaultwarden_finall_version.env
-    environment:
-      ADMIN_TOKEN: "HASLO"  
+      - stack.env 
     volumes:
       - ./vw-data/:/data/
-      - ./vw-data/template/email:/data/templates/email
     ports:
       - "801:80"
     networks:
